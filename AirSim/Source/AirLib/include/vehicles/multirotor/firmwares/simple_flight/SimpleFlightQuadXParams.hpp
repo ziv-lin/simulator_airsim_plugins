@@ -36,7 +36,7 @@ protected:
         //set up arm lengths
         //dimensions are for F450 frame: http://artofcircuits.com/product/quadcopter-frame-hj450-with-power-distribution
         params.rotor_count = 4;
-        std::vector<real_T> arm_lengths(params.rotor_count, 0.2275f);
+        std::vector<real_T> arm_lengths(params.rotor_count, 0.1275f);
 
         //set up mass
         params.mass = 1.0f; //can be varied from 0.800 to 1.600
@@ -48,7 +48,7 @@ protected:
         params.rotor_params.calculateMaxThrust();
 
         //set up dimensions of core body box or abdomen (not including arms).
-        params.body_box.x() = 0.180f; params.body_box.y() = 0.11f; params.body_box.z() = 0.040f;
+        params.body_box.x() = 0.090f; params.body_box.y() = 0.055f; params.body_box.z() = 0.020f;
         real_T rotor_z = 2.5f / 100;
 
         //computer rotor poses

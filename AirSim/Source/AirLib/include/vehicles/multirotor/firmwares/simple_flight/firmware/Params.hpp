@@ -17,7 +17,7 @@ public:
     struct Motor {
         uint16_t motor_count = 4;
         float min_motor_output = 0;
-        float max_motor_output = 1;
+        float max_motor_output = 10;
         //if min_armed_output too low then noise in pitch/roll can destabilize quad copter when throttle is zero
         float min_angling_throttle = Params::min_armed_throttle() / 2;
     } motor;
@@ -55,7 +55,7 @@ public:
 
         //p_xxx_rate params are sensitive to gyro noise. Values higher than 0.5 would require 
         //noise filtration
-        const float kP = 0.25f;
+        const float kP = 2.5f;
         Axis4r p = Axis4r(kP, kP, kP, 1.0f);
     } angle_rate_pid;
 
